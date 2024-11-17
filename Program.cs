@@ -1,10 +1,18 @@
 using CarlosCustodio_Ap1_P2.Components;
+using Microsoft.EntityFrameworkCore;
+using CarlosCustodio_Ap1_P2.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+//obtener el ConStr para usarlo en el contexto
+var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
+
+//agregamos el contexto al builder con el ConStr
+builder.Services.AddDbContextFactory<Contexto>(Options => Options.UseSqlServer(ConStr));
 
 var app = builder.Build();
 
