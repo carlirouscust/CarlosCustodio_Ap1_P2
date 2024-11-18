@@ -14,7 +14,7 @@ public class CombosDetalle
 	[ForeignKey("combos")]
 	public int combosId { get; set; }
 
-	public Articulos? articulos { get; set; }
+	public ArticulosC? articulos { get; set; }
 	[ForeignKey("articulos")]
 	public int articuloId { get; set; }
 

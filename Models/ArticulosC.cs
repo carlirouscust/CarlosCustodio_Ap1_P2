@@ -2,7 +2,7 @@
 
 namespace CarlosCustodio_Ap1_P2.Models;
 
-public class Articulos
+public class ArticulosC
 {
 
     [Key]
