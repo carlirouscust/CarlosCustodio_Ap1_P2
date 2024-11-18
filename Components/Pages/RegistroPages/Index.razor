@@ -17,6 +17,7 @@
                 <label for="Filtro" class="form-label">Filtrar por:</label>
                 <select @bind="filtro" class="form-select">
                     <option value="id">ID</option>
+                    <option value="Descripcion">Descripcion</option>
                 </select>
             </div>
             @*Boton buscar*@
@@ -98,10 +99,10 @@
             {
                 ListaCombos = await combosService.Listar(T => T.combosId == registroId);
             }
-            // else if (filtro == "-------")
-            // {
-            //     ListaRegistro = await registroService.Listar(T => T.clientes != null && T.clientes.Nombre == valorFiltro);
-            // }
+            else if (filtro == "Descripcion")
+            {
+                ListaCombos = await combosService.Listar(T => T.descripcion != null && T.descripcion == valorFiltro);
+            }
             else
             {
                 ListaCombos = await combosService.Listar(T => true);
