@@ -1,10 +1,25 @@
 ﻿@page "/Combo/Create"
-@inject combosService registroService
+@inject combosService combosService
 @inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 
-<PageTitle>Registro de Registro</PageTitle>
+<PageTitle>Registro de Combos</PageTitle>
 
+<EditForm Model="combos" class="border shadow-lg p-3 rounded">
+    <div class="card-header bg-primary text-white text-center py-2 rounded">
+        <h3 style="font-weight: bold;" class="mb-0 font-weight-bold">Registro Combos</h3>
+    </div>
+    <div class="card-body">       
+        <div class="col-mb-3">
+            <ImputNumber class="">@combos.combosId</ImputNumber>
+        </div>
+            
+        
+    </div>
+
+  
+</EditForm>
 @code {
+    public Combos combos = new Combos();
 
 }
