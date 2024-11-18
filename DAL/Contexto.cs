@@ -26,7 +26,7 @@ public class Contexto : DbContext
             new Articulos
             {
                 articuloId = 2,
-                descripcion = "Case Corsair",
+                descripcion = "Disco Duro HP 524GB",
                 costo = 1500.00m,
                 precio = 3000.00m,
                 existencia = 100
