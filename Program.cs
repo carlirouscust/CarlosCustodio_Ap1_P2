@@ -1,6 +1,7 @@
 using CarlosCustodio_Ap1_P2.Components;
 using Microsoft.EntityFrameworkCore;
 using CarlosCustodio_Ap1_P2.DAL;
+using CarlosCustodio_Ap1_P2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,10 @@ var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
 
 //agregamos el contexto al builder con el ConStr
 builder.Services.AddDbContextFactory<Contexto>(Options => Options.UseSqlServer(ConStr));
+
+builder.Services.AddScoped<RegistroService>();
+
+
 
 var app = builder.Build();
 
