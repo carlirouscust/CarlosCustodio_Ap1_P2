@@ -13,9 +13,9 @@ public class Contexto : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Articulos>().HasData(new List<Articulos>()
+        modelBuilder.Entity<ArticulosC>().HasData(new List<ArticulosC>()
         {
-            new Articulos
+            new ArticulosC
             {
                 articuloId = 1,
                 descripcion = "RAM Corsair 16GB",
@@ -23,7 +23,7 @@ public class Contexto : DbContext
                 precio = 5000.00m,
                 existencia = 100
             },
-            new Articulos
+            new ArticulosC
             {
                 articuloId = 2,
                 descripcion = "Disco Duro HP 524GB",
@@ -31,7 +31,7 @@ public class Contexto : DbContext
                 precio = 3000.00m,
                 existencia = 100
             },
-            new Articulos
+            new ArticulosC
             {
                 articuloId = 3,
                 descripcion = "Intel i7 11va Gen",
@@ -39,7 +39,7 @@ public class Contexto : DbContext
                 precio = 35000.00m,
                 existencia = 100
             },
-            new Articulos
+            new ArticulosC
             {
                 articuloId = 4,
                 descripcion = "Power Suply Corsair",
