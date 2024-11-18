@@ -40,6 +40,13 @@
         <thead class="bg-primary text-white">
             <tr>
                 <th>ID</th>            
+                <th>Fecha</th>            
+                <th>Descripcion</th>            
+                <th>Precio</th>            
+                <th>Vendido</th>            
+                <th>Ver</th>            
+                <th>Editar</th>            
+                <th>Eliminar</th>            
             </tr>
         </thead>
         <tbody>
@@ -47,6 +54,14 @@
             {
                 <tr>
                     <td>@item.combosId</td>
+                    <td>@item.fecha.ToString("dd/MM/yyyy")</td>
+                    <td>@item.descripcion</td>
+                    <td>@item.vendido</td>
+                    <td>
+                        <a class="btn btn-outline-success" href="/Combo/Details/@item.combosId">
+                            <span class="bi bi-eye"></span>
+                        </a>
+                    </td>
                     <td>
                         <a class="btn btn-outline-success" href="/Combo/Edit/@item.combosId">
                             <span class="bi bi-marker-tip"></span>
