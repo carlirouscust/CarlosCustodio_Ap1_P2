@@ -9,6 +9,7 @@ public class Contexto : DbContext
     : base(options) { }
 
     public DbSet<Combos> combo { get; set; }
+    public DbSet<ArticulosC> ArticulosC { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
