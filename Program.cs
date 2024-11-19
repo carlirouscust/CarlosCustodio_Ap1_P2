@@ -15,7 +15,9 @@ var ConStr = builder.Configuration.GetConnectionString("DefaultConnection");
 //agregamos el contexto al builder con el ConStr
 builder.Services.AddDbContextFactory<Contexto>(Options => Options.UseSqlServer(ConStr));
 
-builder.Services.AddScoped<RegistroService>();
+builder.Services.AddScoped<combosService>();
+builder.Services.AddScoped<articulosService>();
+
 builder.Services.AddApplicationInsightsTelemetry(new Microsoft.ApplicationInsights.AspNetCore.Extensions.ApplicationInsightsServiceOptions
 {
     ConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]
