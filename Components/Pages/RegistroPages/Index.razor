@@ -44,8 +44,7 @@
                 <th>ID</th>            
                 <th>Fecha</th>            
                 <th>Descripcion</th>            
-                <th>Precio</th>            
-                <th>Vendido</th>            
+                <th>Precio</th>                        
                 <th>Ver</th>            
                 <th>Editar</th>            
                 <th>Eliminar</th>            
@@ -58,7 +57,7 @@
                     <td>@item.combosId</td>
                     <td>@item.fecha.ToString("dd/MM/yyyy")</td>
                     <td>@item.descripcion</td>
-                    <td>@item.vendido.ToString("true")</td>
+                    <td>@item.precio</td>
                     <td>
                         <a class="btn btn-outline-success" href="/Combo/Details/@item.combosId">
                             <span class="bi bi-eye"></span>
